@@ -1,0 +1,9 @@
+.title-section {
+    font-size: rem(25);
+    font-weight: 600;
+    margin-bottom: rem(25);
+
+    @include media-breakpoint-down(lg) {
+        font-size: rem(22);
+    }
+}

@@ -1,0 +1,92 @@
+@import 'node_modules/slick-carousel/slick/slick.scss';
+
+.slick-slider {
+    display: none;
+    user-select: auto;
+
+    &.slick-initialized {
+        display: block;
+
+        & + .slick-loader {
+            display: none;
+        }
+    }
+}
+
+.slick-arrow {
+    position: absolute;
+    transition: .3s ease-in-out;
+    cursor: pointer;
+    z-index: 2;
+    outline: 0;
+    border: 0;
+
+    &.slick-disabled {
+        opacity: .3;
+        pointer-events: none;
+    }
+}
+
+.slick-arrow--primary {
+    width: 30px;
+    height: 30px;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $g-color-black;
+
+    svg {
+        width: 17px;
+        height: 17px;
+    }
+
+    &.slick-prev {
+        left: 0;
+        right: auto;
+    }
+}
+
+.slick-dots {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    line-height: 0;
+    text-align: center;
+    z-index: 2;
+
+    li {
+        display: inline-block;
+        vertical-align: middle;
+        margin: 10px 6.5px 0;
+        padding: 0;
+    }
+
+    button {
+        width: 14px;
+        height: 8px;
+        display: block;
+        position: relative;
+        font-size: 0;
+        line-height: 0;
+        text-indent: -9999px;
+        color: transparent;
+        outline: none;
+        cursor: pointer;
+        border: none;
+        background: $g-color-gray-2;
+        border-radius: rem(30);
+        transition: .3s;
+
+        &:hover {
+            background: $g-color-primary;
+        }
+    }
+
+    li.slick-active button {
+        width: 35px;
+        background: $g-color-primary;
+    }
+}

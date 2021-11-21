@@ -1,0 +1,14 @@
+@import 'utils/vars';
+@import 'utils/functions';
+@import 'utils/mixins';
+@import 'utils/fonts';
+
+
+@import 'components/preloader/preloader';
+
+@import 'node_modules/bootstrap/scss/bootstrap-reboot';
+@import 'node_modules/bootstrap/scss/bootstrap-grid';
+@import 'node_modules/bootstrap/scss/utilities/_sizing';
+
+@import 'vendor/slick/slick';
+@import 'vendor/lightgallery/lightgallery';

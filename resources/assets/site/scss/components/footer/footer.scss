@@ -1,0 +1,87 @@
+@import 'footer-nav';
+
+.footer {
+    a {
+        transition: .3s;
+    }
+
+    &__top {
+        color: $g-color-gray-3;
+        padding-top: rem(32);
+        padding-bottom: rem(10);
+        background: url('#{$path-images}/general/section-bg.png') no-repeat top center $g-color-black-2;
+        background-size: cover;
+
+        a {
+            color: $g-color-white;
+
+            &:hover,
+            &:focus {
+                color: $g-color-primary;
+            }
+        }
+    }
+
+    &__bottom {
+        color: $g-color-gray-5;
+        font-size: rem(13);
+        line-height: 2;
+        padding-top: rem(26);
+        padding-bottom: rem(26);
+        background-color: $g-color-black-3;
+
+        a {
+            color: $g-color-gray-5;
+
+            &:hover,
+            &:focus {
+                color: $g-color-primary;
+            }
+        }
+    }
+
+    &__bottom-col {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    &__dev {
+        a {
+            color: #5C5C5C;
+
+            &:hover,
+            &:focus {
+                color: $g-color-primary;
+            }
+        }
+
+        .icon {
+            width: 191px;
+            height: 21px;
+        }
+    }
+
+
+    @include media-breakpoint-down(lg) {
+        &__top {
+            padding-top: rem(30);
+            padding-bottom: rem(30);
+        }
+    }
+
+    @include media-breakpoint-down(sm) {
+        &__bottom {
+            padding-top: rem(20);
+            padding-bottom: rem(20);
+        }
+
+        &__bottom-col {
+            width: 100%;
+            text-align: center;
+
+            &:not(:last-child) {
+                margin-bottom: rem(15);
+            }
+        }
+    }
+}

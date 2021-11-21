@@ -1,0 +1,50 @@
+.document {
+    display: flex;
+    align-items: center;
+    margin-bottom: rem(25);
+    padding-bottom: rem(25);
+    border-bottom: 1px solid $g-color-gray;
+
+    &__icon,
+    &__download {
+        flex-shrink: 0;
+    }
+
+    &__icon {
+        width: rem(30);
+        height: rem(29);
+        margin-right: rem(30);
+    }
+
+    &__title {
+        margin-right: rem(30);
+        font-weight: 500;
+        flex-grow: 1;
+    }
+
+    &__download {
+        font-size: rem(13);
+        font-weight: 700;
+
+        .icon {
+            width: rem(6);
+            height: rem(10);
+            margin-left: rem(6);
+        }
+    }
+
+
+    @include media-breakpoint-down(sm) {
+        &__icon,
+        &__title {
+            margin-right: rem(20);
+        }
+    }
+
+}
+
+.documents {
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}

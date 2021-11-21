@@ -1,0 +1,30 @@
+.breadcrumbs {
+    font-size: rem(12);
+
+    li {
+        display: inline-block;
+
+        &:not(:last-child) {
+            margin-right: rem(2);
+
+            &::after {
+                content: '»';
+                display: inline;
+            }
+        }
+
+        &:last-child a {
+            opacity: .5;
+            pointer-events: none;
+        }
+    }
+
+    a {
+        color: $g-color-white;
+
+        &:hover,
+        &:focus {
+            color: $g-color-primary;
+        }
+    }
+}

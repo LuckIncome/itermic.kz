@@ -1,0 +1,52 @@
+@import 'intro-slider';
+
+.intro {
+    position: relative;
+    overflow: hidden;
+
+    &__inner {
+        position: relative;
+    }
+
+    &__aside {
+        position: absolute;
+        top: 0;
+        left: 100%;
+        width: 134px;
+        background-color: $g-color-black-2;
+        overflow: hidden;
+        z-index: 10;
+    }
+
+    &__aside-inner {
+        width: 100%;
+        height: 100%;
+        padding: rem(37) rem(20) rem(20);
+        border-radius: rem(60) 0 0 0;
+        background-color: $g-color-white;
+    }
+
+
+    @media (max-width: 1439.99px) {
+        &__aside {
+            top: 50%;
+            left: auto;
+            right: 0;
+            width: 90px;
+            transform: translateY(-50%);
+            background-color: transparent;
+        }
+
+        &__aside-inner {
+            padding: 0;
+            border-radius: 0;
+            background-color: transparent;
+        }
+    }
+
+    @include media-breakpoint-down(xs) {
+        &__aside {
+            width: 70px;
+        }
+    }
+}

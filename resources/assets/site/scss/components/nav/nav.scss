@@ -1,0 +1,90 @@
+.nav {
+    width: 100vw;
+    position: relative;
+    padding: rem(13.5) rem(40);
+    background-color: $g-color-black-2;
+    border-radius: rem(20) 0 0 0;
+
+    &::before {
+        content: '';
+        position: absolute;
+        right: 100%;
+        bottom: 0;
+        width: 23px;
+        height: 23px;
+        background: url('#{$path-images}/general/nav-angle.svg') no-repeat;
+        background-size: contain;
+    }
+
+    &__list {
+        @include media-breakpoint-up(xl) {
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 980px;
+        }
+    }
+
+    &__item {
+        min-width: 162px;
+        position: relative;
+        padding-left: rem(15);
+        padding-right: rem(15);
+        text-align: center;
+
+        &:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            width: 1.5px;
+            background-color: $g-color-gray-4;
+        }
+    }
+
+    &__link {
+        color: $g-color-white;
+        font-weight: 600;
+        line-height: 1.87;
+        display: inline-block;
+        vertical-align: middle;
+        transition: .3s;
+
+        &:hover,
+        &:focus,
+        &.is-active {
+            color: $g-color-primary;
+        }
+    }
+
+
+    @include media-breakpoint-down(lg) {
+        width: 100%;
+        padding: rem(30);
+        border-radius: 0;
+
+        &::before {
+            content: none;
+        }
+
+        &__item {
+            padding: 0;
+
+            &:not(:last-child) {
+                margin-bottom: rem(30);
+            }
+
+            &::after {
+                content: none !important;
+            }
+        }
+    }
+
+    @include media-breakpoint-down(sm) {
+        padding: rem(30) rem(15);
+
+        &__item:not(:last-child) {
+            margin-bottom: rem(20);
+        }
+    }
+}

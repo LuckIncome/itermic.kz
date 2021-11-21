@@ -1,0 +1,170 @@
+@import 'header-hamburger';
+
+.header {
+    overflow: hidden;
+
+    &__logo {
+        max-width: 135px;
+        margin-right: rem(35);
+        padding-top: rem(15);
+        padding-bottom: rem(15);
+        flex-shrink: 0;
+
+        a, img {
+            display: inline-block;
+            vertical-align: middle;
+        }
+    }
+
+    &__main {
+        flex-direction: column;
+        width: calc(100% - 170px);
+        padding-top: rem(8);
+
+        @include media-breakpoint-up(xl) {
+            display: flex !important;
+        }
+    }
+
+    &__slogan {
+        position: relative;
+        margin: 0 rem(-35) rem(25);
+        font-size: rem(35);
+        font-weight: 300;
+        text-align: center;
+        line-height: 1.25;
+        min-height: 60px;
+        background: url('#{$path-images}/general/slogan-waves-left.svg') 0 12px no-repeat,
+                    url('#{$path-images}/general/slogan-waves-right.svg') 100% 12px no-repeat;
+        background-size: 356px 44px;
+
+        &--mb {
+            flex-grow: 1;
+        }
+
+        span,
+        strong {
+            color: $g-color-primary;
+            font-weight: 600;
+        }
+    }
+
+    &__phones {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-bottom: rem(25);
+
+        a {
+            color: $g-color-black;
+            font-size: rem(22);
+            font-weight: 500;
+            line-height: 1.25;
+            margin-left: rem(30);
+            margin-right: rem(30);
+            transition: .3s;
+
+            &:hover,
+            &:focus {
+                color: $g-color-primary;
+            }
+
+            span,
+            strong {
+                color: $g-color-primary;
+                font-weight: 400;
+            }
+        }
+    }
+
+    &__nav {
+        margin-top: auto;
+    }
+
+
+    @include media-breakpoint-down(lg) {
+        overflow: visible;
+
+        .container {
+            position: relative;
+        }
+
+        &__logo {
+            margin-right: rem(30);
+
+            img {
+                max-height: 90px;
+            }
+        }
+
+        &__main {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 15px;
+            right: 15px;
+            width: auto;
+            padding-top: rem(30);
+            border-top: 1px solid $g-color-gray;
+            background-color: $g-color-white;
+            box-shadow: 0 10px 10px rgba(7, 36, 59, .2);
+            border-radius: 0 0 rem(20) rem(20);
+            z-index: $zindex-dropdown;
+            overflow: hidden;
+        }
+
+        &__slogan {
+            margin: 0 0 rem(30);
+            font-size: rem(28);
+            min-height: 30px;
+            background-size: 200px 25px;
+            background-position: 0 7px, 100% 7px;
+        }
+
+        &__phones {
+            margin-bottom: rem(30);
+
+            a {
+                font-size: rem(18);
+            }
+        }
+    }
+
+    @include media-breakpoint-down(md) {
+        &__slogan {
+            font-size: rem(25);
+            background-size: 180px 22px;
+        }
+    }
+
+    @include media-breakpoint-down(sm) {
+        &__slogan {
+            min-height: auto;
+            background: none;
+            padding-left: rem(15);
+            padding-right: rem(15);
+        }
+
+        &__phones {
+            flex-direction: column;
+            align-items: center;
+
+            a {
+                margin-left: rem(15);
+                margin-right: rem(15);
+
+                &:not(:last-child) {
+                    margin-bottom: rem(15);
+                }
+            }
+        }
+    }
+
+    @include media-breakpoint-down(xs) {
+        &__main {
+            left: 0;
+            right: 0;
+            border-radius: 0;
+        }
+    }
+}

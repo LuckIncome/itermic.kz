@@ -1,0 +1,162 @@
+.btn {
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    padding: em(19.5, 13) em(30, 13);
+    color: $g-color-black;
+    font-family: inherit;
+    font-size: rem(13);
+    font-weight: 500;
+    line-height: 1.2;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    border-radius: em(100, 13);
+    background: transparent;
+    transition: .3s;
+    user-select: none;
+    border: none;
+
+    &:hover,
+    &:focus {
+        color: $g-color-black;
+        text-decoration: none;
+    }
+
+    &[disabled] {
+        opacity: .8;
+        pointer-events: none;
+    }
+
+    &__loader {
+        display: none;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: rem(20);
+        height: rem(20);
+        margin-top: rem(-10);
+        margin-left: rem(-10);
+        animation: btn-spinner 1s linear infinite;
+
+        &-in,
+        &-in::before {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        &-in {
+            left: 50%;
+            overflow: hidden;
+
+            &::before {
+                content: '';
+                left: -50%;
+                border-radius: 100%;
+                box-shadow: inset 0 0 0 2px currentColor;
+            }
+        }
+    }
+
+    &.is-loading {
+        pointer-events: none;
+
+        > *:not(.btn__loader) {
+            opacity: 0;
+        }
+
+        .btn__loader {
+            display: block;
+        }
+    }
+
+
+    @include media-breakpoint-down(xs) {
+        padding: em(17.5, 13) em(25, 13);
+    }
+}
+
+@keyframes btn-spinner {
+    0% {
+        transform: rotate(0deg)
+    }
+
+    to {
+        transform: rotate(1turn)
+    }
+}
+
+.btn--lg {
+    @include media-breakpoint-up(lg) {
+        font-size: rem(17);
+        font-weight: 600;
+        padding: em(21, 17) em(38, 17);
+    }
+}
+
+.btn--w-170 {
+    min-width: 170px;
+}
+
+.btn--primary {
+    color: $g-color-white;
+    background: $g-color-primary;
+
+    &:hover,
+    &:focus {
+        color: $g-color-white;
+        background: darken($g-color-primary, 8%);
+    }
+}
+
+.btn--outline {
+    &-primary {
+        color: $g-color-primary;
+        box-shadow: inset 0 0 0 1px $g-color-primary;
+
+        &:hover,
+        &:focus {
+            color: $g-color-white;
+            background: $g-color-primary;
+        }
+    }
+
+    &-secondary {
+        color: $g-color-black;
+        box-shadow: inset 0 0 0 1px $g-color-black;
+
+        &:hover,
+        &:focus {
+            color: $g-color-white;
+            background: $g-color-black;
+        }
+    }
+
+    &-white {
+        color: $g-color-white;
+        box-shadow: inset 0 0 0 1px $g-color-white;
+
+        &:hover,
+        &:focus {
+            color: $g-color-black;
+            background: $g-color-white;
+        }
+    }
+}
+
+.btn--more {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+
+    .icon {
+        width: rem(6);
+        height: rem(10);
+        margin-left: rem(20);
+        flex-shrink: 0;
+    }
+}

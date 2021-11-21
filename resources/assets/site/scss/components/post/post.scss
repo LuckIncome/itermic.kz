@@ -1,0 +1,20 @@
+@import 'post-card';
+@import 'post-images';
+@import 'post-videos';
+@import 'post-files';
+
+.post {
+    &__meta {
+        font-size: rem(12);
+        line-height: 1.33;
+        margin-bottom: rem(30);
+    }
+
+    &__date {
+        color: $g-color-gray-3;
+    }
+
+    &__main {
+        @include clearfix;
+    }
+}

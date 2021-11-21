@@ -1,0 +1,14 @@
+.post-videos {
+    clear: both;
+
+    &__item {
+        min-height: 200px;
+        padding-top: aspect-ratio(700, 430);
+        border-radius: rem(15);
+        overflow: hidden;
+
+        &:not(:last-child) {
+            margin-bottom: rem(15);
+        }
+    }
+}

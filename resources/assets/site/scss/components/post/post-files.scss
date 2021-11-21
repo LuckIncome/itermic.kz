@@ -1,0 +1,11 @@
+.post-files {
+    clear: both;
+
+    &__item:not(:last-child) {
+        margin-bottom: rem(15);
+    }
+
+    &__link {
+        @include word-break;
+    }
+}

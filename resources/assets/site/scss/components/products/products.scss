@@ -1,0 +1,16 @@
+@import 'product-preview';
+@import 'product-card';
+@import 'product-slider';
+
+.products {
+    &--line {
+        margin-bottom: rem(45);
+        padding-bottom: rem(15);
+        border-bottom: 1px solid $g-color-gray;
+
+        @include media-breakpoint-down(lg) {
+            margin-bottom: rem(35);
+            padding-bottom: rem(5);
+        }
+    }
+}

@@ -1,0 +1,39 @@
+.useful-posts {
+    &__inner {
+        color: $g-color-white;
+        padding-top: rem(23);
+        padding-bottom: rem(40);
+        background: url('#{$path-images}/general/section-bg.png') no-repeat top center $g-color-black-2;
+        background-size: cover;
+    }
+
+    &__preview {
+        margin-top: rem(62);
+        border-radius: rem(30);
+    }
+
+    &__slider {
+        padding-bottom: rem(46);
+
+        .slick-list {
+            margin-left: -15px;
+            margin-right: -15px;
+            border-radius: rem(15);
+        }
+
+        .slick-slide {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+    }
+
+    @include media-breakpoint-down(xs) {
+        &__inner {
+            padding-bottom: rem(30);
+        }
+
+        &__slider {
+            padding-bottom: rem(44);
+        }
+    }
+}

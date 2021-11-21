@@ -1,0 +1,23 @@
+.footer-nav {
+    ul {
+        column-count: 3;
+        column-gap: 30px;
+
+        @include media-breakpoint-down(xs) {
+            column-count: 2;
+        }
+    }
+
+    li {
+        margin-bottom: rem(16);
+    }
+
+    a {
+        font-weight: 500;
+        line-height: 1.25;
+
+        @include media-breakpoint-up(xl) {
+            font-size: rem(18);
+        }
+    }
+}

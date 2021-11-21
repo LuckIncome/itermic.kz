@@ -1,0 +1,149 @@
+.formatted-body {
+    @include clearfix;
+
+    > *:first-child {
+        margin-top: 0;
+    }
+
+    > *:last-child {
+        margin-bottom: 0;
+    }
+
+    b,
+    strong {
+        font-weight: 600;
+    }
+
+    p,
+    table,
+    blockquote {
+        margin-bottom: rem(25);
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        font-weight: 600;
+    }
+
+    h1 {
+        font-size: rem(35);
+        margin-top: rem(35);
+        margin-bottom: rem(35);
+
+        @include media-breakpoint-down(lg) {
+            font-size: rem(28);
+            margin-top: rem(28);
+            margin-bottom: rem(28);
+        }
+
+        @include media-breakpoint-down(md) {
+            font-size: rem(25);
+            margin-top: rem(25);
+            margin-bottom: rem(25);
+        }
+    }
+
+    h2 {
+        font-size: rem(25);
+        margin-bottom: rem(25);
+
+        @include media-breakpoint-down(lg) {
+            font-size: rem(22);
+        }
+    }
+
+    h3 {
+        font-size: rem(20);
+        font-weight: 600;
+        margin-bottom: 0;
+
+        @include media-breakpoint-down(lg) {
+            font-size: rem(18);
+        }
+    }
+
+    table, th, td {
+        border: 1px solid $g-color-gray;
+        border-collapse: collapse;
+    }
+
+    table {
+        max-width: 100%;
+
+        td, th {
+            padding: .92em;
+
+            > *:first-child {
+                margin-top: 0;
+            }
+
+            > *:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    ul, ol {
+        margin: 0 0 rem(25) rem(30);
+
+        li {
+            margin-bottom: rem(5);
+        }
+    }
+
+    ul {
+        list-style: initial;
+
+        li {
+            list-style: inherit;
+        }
+    }
+
+    ul ul,
+    ul ol,
+    ol ol,
+    ol ul {
+        margin-top: rem(5);
+        margin-bottom: 0;
+    }
+
+    img,
+    iframe,
+    blockquote {
+        border-radius: rem(15);
+    }
+
+    blockquote {
+        margin: rem(25) 0;
+        padding: 0 rem(15);
+        font-style: italic;
+        border-left: 3px solid $g-color-primary;
+
+        p {
+            margin-top: rem(10);
+            margin-bottom: rem(10);
+        }
+
+        > *:first-child {
+            margin-top: 0;
+        }
+
+        > *:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    iframe {
+        max-width: 100%;
+        display: inline-block;
+        vertical-align: middle;
+        border: 0;
+    }
+
+
+    @include media-breakpoint-down(sm) {
+        img {
+            height: auto !important;
+        }
+    }
+
+}

@@ -1,0 +1,47 @@
+.page-error {
+    padding-bottom: rem(62);
+    text-align: center;
+
+    &__code {
+        color: $g-color-primary;
+        font-size: rem(300);
+        font-weight: 400;
+        line-height: 1.22;
+        margin-bottom: rem(25);
+    }
+
+    &__desc {
+        font-size: rem(20);
+        margin-bottom: rem(45);
+    }
+
+
+    @include media-breakpoint-down(lg) {
+        padding-bottom: rem(30);
+
+        &__code {
+            font-size: rem(250);
+        }
+
+        &__desc {
+            font-size: rem(16);
+            margin-bottom: rem(40);
+        }
+    }
+
+    @include media-breakpoint-down(sm) {
+        padding-top: rem(10);
+        padding-bottom: rem(10);
+
+        &__code {
+            font-size: rem(120);
+            margin-bottom: rem(20);
+        }
+
+        &__desc {
+            font-size: rem(15);
+            margin-bottom: rem(30);
+        }
+    }
+
+}

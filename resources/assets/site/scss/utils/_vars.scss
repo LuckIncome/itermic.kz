@@ -1,0 +1,84 @@
+/* Paths */
+$path-images: '/site/images';
+$path-fonts: '/site/fonts';
+
+/* Fonts */
+$g-font: 'Montserrat', sans-serif;
+$g-fontsize: 15;
+$g-textcolor: #000;
+$g-lineheight: 1.5;
+
+/* Customization Bootstrap vars from "bootstrap/scss/_variables.scss" */
+$grid-gutter-width: 30px;
+$gutter: $grid-gutter-width;
+
+$grid-breakpoints: (
+    xs: 0,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px
+);
+$container-max-widths: (
+    sm: 540px,
+    md: 720px,
+    lg: 960px,
+    xl: 1200px
+);
+
+// Spacing
+$spacer: 1rem;
+$spacers: ();
+
+$spacers: map-merge(
+    (
+        0: 0,
+        1: ($spacer * .25),
+        2: ($spacer * .5),
+        3: $spacer,
+        4: ($spacer * 1.5),
+        5: ($spacer * 2),
+        6: ($spacer * 2.5),
+        7: ($spacer * 3),
+        8: ($spacer * 3.5),
+        9: ($spacer * 4)
+    ),
+    $spacers
+);
+
+$zindex-dropdown:       1000;
+$zindex-sticky:         1020;
+$zindex-fixed:          1030;
+$zindex-modal-backdrop: 1040;
+$zindex-modal:          1050;
+$zindex-popover:        1060;
+$zindex-tooltip:        1070;
+
+/* Colors */
+$g-color-primary: #F1674A;
+
+$g-color-white: #fff;
+
+$g-color-black: #000;
+$g-color-black-2: #393E4D;
+$g-color-black-3: #252730;
+
+$g-color-gray: #E1E1E1;
+$g-color-gray-2: #888;
+$g-color-gray-3: #999;
+$g-color-gray-4: #666;
+$g-color-gray-5: #777;
+
+$g-color-danger: #dc3545;
+
+
+
+
+
+
+
+
+
+
+
+

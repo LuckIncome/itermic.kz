@@ -1,0 +1,119 @@
+/* Bootstrap mixins and functions */
+@import 'node_modules/bootstrap/scss/functions';
+@import 'node_modules/bootstrap/scss/mixins/breakpoints';
+@import 'node_modules/bootstrap/scss/mixins/grid-framework';
+@import 'node_modules/bootstrap/scss/mixins/grid';
+
+/* Utils */
+@import 'utils/vars';
+@import 'utils/functions';
+@import 'utils/mixins';
+
+
+/* General styles */
+* {
+    margin: 0;
+    outline: 0;
+    padding: 0;
+}
+
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+img {
+    height: auto;
+    max-width: 100%;
+    font-style: italic;
+    font-size: rem(12);
+}
+
+table img {
+    max-width: none;
+}
+
+ol, ul, dl {
+    margin: 0;
+}
+
+ul li {
+    list-style: none;
+}
+
+p {
+    margin-bottom: rem(25);
+}
+
+a {
+    color: $g-color-primary;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+        color: darken($g-color-primary, 5%);
+        text-decoration: none;
+    }
+}
+
+svg {
+    width: 1em;
+    height: 1em;
+    fill: currentColor;
+    pointer-events: none;
+}
+
+button:focus {
+    outline: 0;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    min-width: 320px;
+    position: relative;
+    color: $g-textcolor;
+    font-family: $g-font;
+    font-size: rem($g-fontsize);
+    line-height: $g-lineheight;
+}
+
+.wrap {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+    html.is-ie & {
+        display: block;
+    }
+}
+
+.main {
+    width: 100%;
+    flex: 1;
+}
+
+.icon {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+
+    &--arrow,
+    &--barb-arrow {
+        stroke: currentColor;
+    }
+
+    &--arrow-left,
+    &--barb-arrow-left {
+        transform: rotate(180deg);
+    }
+
+    &--arrow-down {
+        transform: rotate(90deg);
+    }
+}
+
+
+/* Components */
+@import 'components/components';

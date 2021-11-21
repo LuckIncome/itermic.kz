@@ -1,0 +1,32 @@
+.product-preview {
+    &__media {
+        overflow: hidden;
+
+        video,
+        iframe {
+            width: 100%;
+            height: 300px;
+            display: block;
+            border: none;
+            background-color: $g-color-black;
+        }
+    }
+
+    @include media-breakpoint-up(xl) {
+        &__content {
+            padding-left: rem(35);
+        }
+
+        &__title {
+            margin-bottom: rem(30);
+        }
+
+        &__desc {
+            padding-left: rem(32);
+        }
+    }
+
+    &__desc > *:last-child {
+        margin-bottom: 0;
+    }
+}

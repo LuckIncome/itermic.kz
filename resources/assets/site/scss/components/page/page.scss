@@ -1,0 +1,45 @@
+@import 'page-error';
+
+.page {
+    &__intro {
+        color: $g-color-white;
+        padding-top: rem(21);
+        padding-bottom: rem(21);
+        background-color: #2E323E;
+    }
+
+    &__inner {
+        padding-top: rem(45);
+        padding-bottom: rem(45);
+    }
+
+    &__aside {}
+
+    &__main {
+        min-height: 200px;
+    }
+
+
+    @include media-breakpoint-up(xl) {
+        &__intro-inner.has-pl,
+        &__main.has-pl {
+            padding-left: 85px;
+        }
+    }
+
+    @include media-breakpoint-down(lg) {
+        &__intro {
+            text-align: center;
+        }
+
+        &__inner {
+            padding-top: rem(35);
+            padding-bottom: rem(35);
+        }
+
+        &__inner.has-aside {
+            padding-bottom: rem(5);
+        }
+    }
+
+}

@@ -1,0 +1,40 @@
+.socials {
+    margin-bottom: rem(40);
+
+    &__link {
+        width: 40px;
+        height: 40px;
+        display: block;
+        margin: 0 auto rem(22);
+        color: $g-color-gray-4;
+        transition: all .3s linear;
+        opacity: .2;
+
+        &:hover,
+        &:focus {
+            color: $g-color-primary;
+            opacity: 1;
+        }
+
+        svg {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+
+    @media (max-width: 1439.99px) {
+        margin-bottom: rem(30);
+
+        &__link {
+            color: $g-color-white;
+            opacity: .85;
+
+            &:hover,
+            &:focus {
+                color: $g-color-white;
+                opacity: 1;
+            }
+        }
+    }
+}
